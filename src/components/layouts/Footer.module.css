@@ -3,7 +3,6 @@
     color: #fff;
     padding: 3em;
     text-align: center;
-    width: 100%;
 }
 
 .social_list {
@@ -17,10 +16,10 @@
 }
 
 .social_list li:hover {
-    color: #FFB833;
+    color: #ffbb33;
 }
 
-.social_list li svg {
+.social_list svg {
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -31,5 +30,5 @@
 
 .copy_right span {
     font-weight: bold;
-    color: #FFB833;
+    color: #ffbb33;
 }
