@@ -1,0 +1,21 @@
+{
+    "projects": [],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Suporte"
+        },
+        {
+            "id": 2,
+            "name": "Desenvolvimento"
+        },
+        {
+            "id": 3,
+            "name": "UX/UI"
+        },
+        {
+            "id": 4,
+            "name": "Manutenção"
+        }
+    ]
+}
