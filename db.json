@@ -2,7 +2,11 @@
   "projects": [
     {
       "name": "Teste",
-      "budget": "10000",
+      "budget": "12345",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
       "costs": 0,
       "service": [],
       "id": 1
@@ -19,11 +23,11 @@
     },
     {
       "id": 3,
-      "name": "UX/UI"
+      "name": "Design"
     },
     {
       "id": 4,
-      "name": "Manutenção"
+      "name": "Planejamento"
     }
   ]
 }

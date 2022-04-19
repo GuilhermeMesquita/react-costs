@@ -7,7 +7,7 @@ const Home = () => {
         <section className={styles.home_container}>
             <h1>Bem-vindo ao <span>costs</span>.</h1>
             <p>Comece a gerenciar os seus projetos agora mesmo!</p>
-            <LinkButton to="/NewProject" text="Criar projeto"></LinkButton>
+            <LinkButton to="/newproject" text="Criar projeto"></LinkButton>
             <img src={savings} alt="Costs" />
         </section>
     )
