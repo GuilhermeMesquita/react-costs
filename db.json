@@ -1,21 +1,29 @@
 {
-    "projects": [],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Suporte"
-        },
-        {
-            "id": 2,
-            "name": "Desenvolvimento"
-        },
-        {
-            "id": 3,
-            "name": "UX/UI"
-        },
-        {
-            "id": 4,
-            "name": "Manutenção"
-        }
-    ]
+  "projects": [
+    {
+      "name": "Teste",
+      "budget": "10000",
+      "costs": 0,
+      "service": [],
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Suporte"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "UX/UI"
+    },
+    {
+      "id": 4,
+      "name": "Manutenção"
+    }
+  ]
 }
