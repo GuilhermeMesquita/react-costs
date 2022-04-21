@@ -1,5 +1,17 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "name": "Notebook",
+      "budget": "12000",
+      "category": {
+        "id": "1",
+        "name": "Suporte"
+      },
+      "costs": 0,
+      "service": [],
+      "id": 1
+    }
+  ],
   "categories": [
     {
       "id": 1,

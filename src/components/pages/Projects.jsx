@@ -11,7 +11,7 @@ const Projects = () => {
 
     const [projects, setProjects] = useState([]);
     const [removeLoad, setRemoveLoad] = useState(false);
-    const [projectMessage, seprojectMessage] = useState("");
+    const [projectMessage, setProjectMessage] = useState("");
 
     const location = useLocation();
     let msg = "";
@@ -41,7 +41,7 @@ const Projects = () => {
         }).then((resp) => resp.json())
             .then(() => {
                 setProjects(projects.filter((project) => project.id !== id))
-                seprojectMessage("Projeto removido com sucesso!");
+                setProjectMessage("Projeto removido com sucesso!");
             }).catch((err) => console.log(err))
     }
 
