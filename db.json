@@ -8,8 +8,64 @@
         "name": "Design"
       },
       "costs": 0,
-      "service": [],
-      "id": 1
+      "service": [
+        {
+          "name": "Teste",
+          "cost": "20",
+          "description": "Tobias Corporation",
+          "id": "dde3a4f1-7aa3-4f7f-a26e-8334241c0f07"
+        },
+        {
+          "name": "Teste",
+          "cost": "20",
+          "description": "Tobias Corporation",
+          "id": "dde3a4f1-7aa3-4f7f-a26e-8334241c0f07"
+        },
+        {
+          "name": "Teste",
+          "cost": "20",
+          "description": "Tobias Corporation",
+          "id": "dde3a4f1-7aa3-4f7f-a26e-8334241c0f07"
+        },
+        {
+          "name": "Teste",
+          "cost": "20",
+          "description": "Tobias Corporation",
+          "id": "dde3a4f1-7aa3-4f7f-a26e-8334241c0f07"
+        },
+        {
+          "name": "Teste",
+          "cost": "20",
+          "description": "Tobias Corporation",
+          "id": "dde3a4f1-7aa3-4f7f-a26e-8334241c0f07"
+        },
+        {
+          "name": "Teste",
+          "cost": "20",
+          "description": "Tobias Corporation",
+          "id": "dde3a4f1-7aa3-4f7f-a26e-8334241c0f07"
+        },
+        {
+          "name": "Teste",
+          "cost": "20",
+          "description": "Tobias Corporation",
+          "id": "dde3a4f1-7aa3-4f7f-a26e-8334241c0f07"
+        },
+        {
+          "name": "Teste",
+          "cost": "20",
+          "description": "Tobias Corporation",
+          "id": "dde3a4f1-7aa3-4f7f-a26e-8334241c0f07"
+        },
+        {
+          "name": "teste 2",
+          "cost": "21",
+          "description": "Me ajuda",
+          "id": "06dddcbb-4805-405b-8fd3-011cbfdb38a7"
+        }
+      ],
+      "id": 1,
+      "cost": 21
     }
   ],
   "categories": [

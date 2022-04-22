@@ -7,9 +7,12 @@ import ProjectForm from './../project/ProjectForm';
 import Message from './../layouts/Message';
 import ServiceForm from './../services/ServiceForm';
 import { parse, v4 as uuidv4 } from 'uuid'
+import { servicesVersion } from 'typescript';
+import ServiceCard from './../services/ServiceCard';
 const Project = () => {
     const { id } = useParams();
     const [project, setProject] = useState([]);
+    const [services, setServices] = useState([]);
     const [showProjectForm, setShowProjectForm] = useState(false);
     const [message, setMessage] = useState("");
     const [messageType, setMessageType] = useState("");
@@ -21,7 +24,11 @@ const Project = () => {
             headers: {
                 "Content-Type": "application/json"
             }
-        }).then((resp) => resp.json()).then((data) => setProject(data)).catch((err) => console.log(err))
+        }).then((resp) => resp.json()).then((data) => {
+            setProject(data)
+            setServices(data.service)
+        }
+        ).catch((err) => console.log(err))
     }, [id]);
 
     function editPost(project) {
@@ -53,6 +60,10 @@ const Project = () => {
         setShowServiceForm(!showServiceForm)
     }
 
+    function removeService() {
+
+    }
+
     function createService(project) {
         setMessage("");
         const lastService = project.service[project.service.length - 1];
@@ -79,7 +90,7 @@ const Project = () => {
             },
             body: JSON.stringify(project)
         }).then((resp) => resp.json()).then((data) => {
-            //show services
+            setShowServiceForm(false);
         }).catch((err) => console.log(err))
 
     }
@@ -120,7 +131,18 @@ const Project = () => {
                     </div>
                     <h2>Serviços</h2>
                     <Container customClass="start">
-                        <p>Itens</p>
+                        {services.length > 0 ? services.map((service) => (
+                            <ServiceCard
+                                id={service.id}
+                                name={service.name}
+                                cost={service.cost}
+                                description={service.description}
+                                key={service.id}
+                                handleRemove={removeService}
+                            />
+                        )) :
+                            <p>Não há serviços cadastrados</p>
+                        }
                     </Container>
                 </Container>
             ) : (<Loading />)}
