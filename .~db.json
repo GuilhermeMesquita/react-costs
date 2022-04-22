@@ -10,12 +10,6 @@
       "costs": 0,
       "service": [
         {
-          "name": "Novinho",
-          "cost": "12",
-          "description": "Teste",
-          "id": "dfb5ffb1-0ca9-4f67-9ed1-9f4137c52059"
-        },
-        {
           "name": "AAAAA",
           "cost": "222",
           "description": "Me ajuda",
@@ -23,7 +17,7 @@
         }
       ],
       "id": 1,
-      "cost": 201
+      "cost": 189
     }
   ],
   "categories": [

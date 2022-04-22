@@ -7,7 +7,6 @@ import ProjectForm from './../project/ProjectForm';
 import Message from './../layouts/Message';
 import ServiceForm from './../services/ServiceForm';
 import { parse, v4 as uuidv4 } from 'uuid'
-import { servicesVersion } from 'typescript';
 import ServiceCard from './../services/ServiceCard';
 const Project = () => {
     const { id } = useParams();
@@ -60,8 +59,31 @@ const Project = () => {
         setShowServiceForm(!showServiceForm)
     }
 
-    function removeService() {
+    function removeService(id, cost) {
+        setMessage('');
+        const servicesUpdated = project.service.filter(
+            (service) => service.id !== id,
+        )
 
+        const projectUpdated = project;
+
+        projectUpdated.service = servicesUpdated;
+        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
+
+        fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(projectUpdated),
+        })
+            .then((resp) => resp.json())
+            .then((data) => {
+                setProject(projectUpdated);
+                setServices(servicesUpdated);
+                setMessage('Serviço removido com sucesso!');
+                setMessageType('success');
+            })
     }
 
     function createService(project) {
@@ -69,7 +91,7 @@ const Project = () => {
         const lastService = project.service[project.service.length - 1];
         lastService.id = uuidv4();
         const lastServiceCost = lastService.cost;
-        const newCost = parseFloat(project.costs) + parseFloat(lastService.cost);
+        const newCost = parseFloat(project.costs) + parseFloat(lastServiceCost);
 
         //max value validation
         if (newCost > parseFloat(project.budget)) {

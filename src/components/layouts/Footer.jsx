@@ -1,19 +1,24 @@
-import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import styles from './Footer.module.css';
+import { FaFacebook, FaInstagram, FaLinkedin, FaHeart } from 'react-icons/fa'
+import styles from './Footer.module.css'
 
-const Footer = () => {
+function Footer() {
     return (
         <footer className={styles.footer}>
             <ul className={styles.social_list}>
-                <li><FaFacebook /></li>
-                <li><FaInstagram /></li>
-                <li><FaLinkedin /></li>
+                <li>
+                    <FaFacebook />
+                </li>
+                <li>
+                    <FaInstagram />
+                </li>
+                <li>
+                    <FaLinkedin />
+                </li>
             </ul>
-            <p>
-                <span className='copy_right'>Costs</span>&copy; 2021
+            <p className={styles.copy_right}>
+                <span>Costs</span> &copy; 2022 developed with <FaHeart style={{ color: "#FFA1A1" }} /> by Guilherme Rocha
             </p>
-        </footer >
+        </footer>
     )
 }
 
